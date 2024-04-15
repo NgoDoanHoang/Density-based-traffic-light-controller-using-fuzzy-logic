@@ -17,7 +17,7 @@ umqtt_Library <br />
 
 **How it works:**<br />
 The idea is at the same time, 2 opposite direction will have the same light color and light time, so I just need 2 RP_Pico_W for that.<br />
-The central one will process data received from those 2 and fuzzificate them, then continue calculate further.<br />
+The central one will process data received from those 2 and fuzzificate them, then continue to calculate further.<br />
 After that, it will send to node pico information about what light color is onn first and for how long.<br />
 
 The original system was with C, ESP32, STM32. However, I was asked to change, that is why fuzzy logic algorithm has a file written in C.  <br />
