@@ -1,0 +1,79 @@
+[System]
+Name='TrafficLight'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=2
+NumRules=25
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='mom'
+
+[Input1]
+Name='Dir1'
+Range=[0 8]
+NumMFs=5
+MF1='Very empty':'linzmf',[0.5 2]
+MF2='Empty':'trapmf',[1.5 2 3 3.5]
+MF3='Normal':'gaussmf',[0.443896411300358 4]
+MF4='Dense':'trapmf',[4.5 5.2 6 7]
+MF5='Very dense':'smf',[6 8]
+
+[Input2]
+Name='Dir2'
+Range=[0 8]
+NumMFs=5
+MF1='Very empty':'linzmf',[0.5 2]
+MF2='Empty':'trapmf',[1.5 2 3 3.5]
+MF3='Normal':'gaussmf',[0.443896 4]
+MF4='Dense':'trapmf',[4.5 5.2 6 7]
+MF5='Very dense':'smf',[6 8]
+
+[Output1]
+Name='LightDir1'
+Range=[15 90]
+NumMFs=5
+MF1='Very short':'linzmf',[20 30]
+MF2='Short':'trapmf',[25 30 35 45]
+MF3='Average':'gaussmf',[4.46600473794182 50]
+MF4='Long':'trapmf',[55 60 68 75]
+MF5='Very long':'linsmf',[70 80]
+
+[Output2]
+Name='LightDir2'
+Range=[15 90]
+NumMFs=5
+MF1='Very short':'linzmf',[20 30]
+MF2='Short':'trapmf',[25 30 35 45]
+MF3='Average':'gaussmf',[4.466 50]
+MF4='Long':'trapmf',[55 60 68 75]
+MF5='Very long':'linsmf',[70 80]
+
+[Rules]
+1 1, 3 3 (1) : 1
+2 1, 4 2 (1) : 1
+3 1, 4 2 (1) : 1
+4 1, 5 1 (1) : 1
+5 1, 5 1 (1) : 1
+1 2, 2 4 (1) : 1
+2 2, 3 3 (1) : 1
+3 2, 4 2 (1) : 1
+4 2, 5 2 (1) : 1
+5 2, 5 1 (1) : 1
+1 3, 2 4 (1) : 1
+2 3, 2 4 (1) : 1
+3 3, 3 3 (1) : 1
+4 3, 4 2 (1) : 1
+5 3, 4 2 (1) : 1
+1 4, 1 5 (1) : 1
+2 4, 2 5 (1) : 1
+3 4, 2 4 (1) : 1
+4 4, 3 3 (1) : 1
+5 4, 4 2 (1) : 1
+1 5, 1 5 (1) : 1
+2 5, 1 5 (1) : 1
+3 5, 2 4 (1) : 1
+4 5, 2 4 (1) : 1
+5 5, 3 3 (1) : 1
