@@ -11,6 +11,11 @@ Hardware:<br />
 4 LED 7-Segment (displaying numbers)<br />
 12 Resister, ... others small components<br />
 
+Software:<br />
+Thonny_IDE <br />
+umqtt_Library <br />
+
+How it works:<br />
 The idea is at the same time, 2 opposite direction will have the same light color and light time, so I just need 2 RP_Pico_W for that.<br />
 The central one will process data received from those 2 and fuzzificate them, then continue calculate further.<br />
 After that, it will send to node pico information about what light color is onn first and for how long.<br />
